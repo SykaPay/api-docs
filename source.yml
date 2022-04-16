@@ -4,7 +4,7 @@ configuration:
   uri: https://0l9fmib2qd.execute-api.us-east-1.amazonaws.com/prod
 categories:
   Authentication:
-    description: For all auth endpoints
+    description: Manage user and authentication
   Profile:
     description: Profile endpoints
   Users:
