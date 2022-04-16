@@ -1,0 +1,66 @@
+configuration:
+  title: SykaPay API Docs
+  description: SykaPay API Documentation
+  uri: https://0l9fmib2qd.execute-api.us-east-1.amazonaws.com/prod
+categories:
+  Authentication:
+    description: For all auth endpoints
+  Profile:
+    description: Profile endpoints
+  Users:
+    description: Manage user and authentication
+versions:
+  v1.0:
+    status: current
+    major: 1
+    minor: 0
+    methods:
+      AuthSignup:
+        label: Signup
+        method: POST
+        uri: /{version}/signup
+        description: Signup user
+        category: Authentication
+        request_parameters:
+          version:
+            type: Version
+            description: Api version
+            generic: true
+        request_body:
+          type: object
+          properties:
+            name:
+              type: string
+              description: name of user
+            email:
+              type: string
+              description: Email of the user
+            country:
+              type: string
+              description: Country
+            password:
+              type: string
+              description: Password of the user
+        response_codes:
+          - code: 404
+            message: User not found
+            description: User does not exists
+          - code: 403
+            message: Forbidden
+            description: User can not register
+        response_body:
+          type: object
+          properties:
+            msg:
+              type: string
+              description: Response message
+
+    types:
+      Version:
+        description: A version
+        format:
+          pretty: VN.N
+          advanced: V\d+\.\d+
+        item:
+          type: string
+          sample: v1.0
