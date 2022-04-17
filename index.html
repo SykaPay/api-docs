@@ -65,6 +65,7 @@
     </ul>
     <ul class="nav nav-list doc-sidenav">
         <li class="nav-header"><h5>Types</h5></li>
+        <li data-group="None" data-item="DefaultHeaders"><a href="javascript:navigateTo({category: 'None', type: 'DefaultHeaders'}, ['category', 'method'])" data-target="#t-DefaultHeaders"><span>DefaultHeaders</span></a></li>
         <li data-group="None" data-item="Version"><a href="javascript:navigateTo({category: 'None', type: 'Version'}, ['category', 'method'])" data-target="#t-Version"><span>Version</span></a></li>
     </ul>
 </div>
@@ -127,6 +128,32 @@
         </tr>
         </tbody>
     </table>
+    <h6>Headers: </h6><table class="table table-bordered table-hover table-condensed">
+        <colgroup>
+            <col></col>
+            <col width="160px"></col>
+            <col width="50%"></col>
+        </colgroup>
+        <thead>
+            <tr>
+            <th><span
+            >Parameter</span></th>
+            <th><span
+            >Type</span></th>
+            <th><span
+            >Description</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <tr class="diff_version " data-version="v1.0">
+            <td><span class="str">Headers</span></td>
+            <td><span class="typ">
+                    <a href="javascript:navigateTo({type: 'DefaultHeaders'}, ['category', 'method'])">DefaultHeaders</a></span></td>
+            <td><span class="com">Default headers to pass</span></td>
+        </tr>
+        </tbody>
+    </table>
     <h6>Body: </h6>
     <div class="code"><table class="table-hover">
         <colgroup>
@@ -148,7 +175,7 @@
         <td class="com">Email of the user</td>
     </tr>
     <tr class="diff_version" data-version="v1.0">
-        <td>  <span class="str">"name"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td>  <span class="str">"name"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span> <i class="i-constraint" data-content="<table class='table table-condensed'><tr><td>maxLength</td><td>40</td></tr><tr><td>minLength</td><td>1</td></tr></table>"></i></td>
         <td class="com">name of user</td>
     </tr>
     <tr class="diff_version" data-version="v1.0">
@@ -208,7 +235,7 @@
         <tr class="diff_version " data-version="v1.0">
             <td><span class="lit">403</span></td>
             <td><span class="str">Forbidden</span></td>
-            <td><span class="com">User can not register</span></td>
+            <td><span class="com">User cannot register</span></td>
         </tr>
         <tr class="diff_version " data-version="v1.0">
             <td><span class="lit">404</span></td>
@@ -223,12 +250,13 @@
 <h6>Request: </h6>
 <div class="code"><span class="hme">POST</span> <span class="hur">/v1.0/signup</span> <span class="hpr">HTTP/1.1</span>
 <span class="hat">Content-Type</span><span class="pun">: </span><span class="hva">application/json; charset=utf-8</span>
+<span class="hat">Headers</span><span class="pun">: </span><span class="hva">my_DefaultHeaders</span>
 
 <span class="pun">{
-</span>  <span class="str">"country"</span><span class="pun">: </span><span class="str">"my_country"</span><span class="pun">,
-</span>  <span class="str">"email"</span><span class="pun">: </span><span class="str">"my_email"</span><span class="pun">,
-</span>  <span class="str">"name"</span><span class="pun">: </span><span class="str">"my_name"</span><span class="pun">,
-</span>  <span class="str">"password"</span><span class="pun">: </span><span class="str">"my_password"</span>
+</span>  <span class="str">"country"</span><span class="pun">: </span><span class="str">"Ghana"</span><span class="pun">,
+</span>  <span class="str">"email"</span><span class="pun">: </span><span class="str">"test@sykapay.com"</span><span class="pun">,
+</span>  <span class="str">"name"</span><span class="pun">: </span><span class="str">"John Doe"</span><span class="pun">,
+</span>  <span class="str">"password"</span><span class="pun">: </span><span class="str">"********"</span>
 <span class="pun">}</span></div>
         <h6>Response: </h6>
         <div class="code"><span class="hpr">HTTP/1.1</span> <span class="lit">200</span> <span class="str">OK</span>
@@ -248,6 +276,52 @@
             <ul class="list-unstyled">
     <li class="category" id="c-None">
         <ul class="list-unstyled">
+            <li class="type item" id="t-DefaultHeaders">
+                <h4>DefaultHeaders</h4><div class="nocontents">no implementation for this version</div>
+                <div class="contents">
+
+
+<div class="description stack">
+    
+    <div class="diff_version" data-version="v1.0">Default headers</div></div><div class="configuration stack">
+    <h5><i class="i-presentation"></i> Presentation: </h5>
+    <div class="code"><table class="table-hover">
+        <colgroup>
+            <col width="50%%"></col>
+            <col width="50%%"></col>
+        </colgroup>
+        <tbody>
+
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">{</span></td>
+        <td class="com"></td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"Accept"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">Accept header</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"Content-Type"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td class="com">Link to the next element</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
+        <td><span class="pun">}</span></td>
+        <td></td>
+    </tr>
+        </tbody>
+    </table></div>
+
+
+</div><div class="stack sample"><div data-version="v1.0">
+
+<h5><i class="i-sample"></i> Formats: </h5>
+<h6>Sample: </h6>
+<div class="code"><span class="pun">{
+</span>  <span class="str">"Accept"</span><span class="pun">: </span><span class="str">"application/json"</span><span class="pun">,
+</span>  <span class="str">"Content-Type"</span><span class="pun">: </span><span class="str">"application/json"</span>
+<span class="pun">}</span></div></div></div>
+                </div>
+            </li>
             <li class="type item" id="t-Version">
                 <h4>Version</h4><div class="nocontents">no implementation for this version</div>
                 <div class="contents">
