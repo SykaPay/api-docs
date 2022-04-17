@@ -8,7 +8,11 @@ pip3 install apidoc
 
 ## Generate Docs
 ```sh
-apidoc -i source.yml -o output/index.html
+apidoc -i source.yml -o ./index.html
+```
+Watch:
+```sh
+apidoc -i source.yml -o ./index.html -w
 ```
 
 ## Check docs
