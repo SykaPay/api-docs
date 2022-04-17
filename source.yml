@@ -49,6 +49,7 @@ versions:
               type: string
               description: Password of the user
               sample: "********"
+              minLength: 6
         request_headers:
           Headers:
             type: DefaultHeaders
@@ -88,8 +89,12 @@ versions:
               sample: application/json
             Content-Type:
               type: string
-              description: Link to the next element
+              description: content-type header
               sample: application/json
+            Access-Control-Allow-Origin:
+              type: string
+              description: allow origin header
+              sample: "*"
 
       AuthorizationHeaders:
         description: Authorization headers

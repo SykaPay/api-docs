@@ -179,7 +179,7 @@
         <td class="com">name of user</td>
     </tr>
     <tr class="diff_version" data-version="v1.0">
-        <td>  <span class="str">"password"</span><span class="pun">: </span><span class="typ">string</span></td>
+        <td>  <span class="str">"password"</span><span class="pun">: </span><span class="typ">string</span> <i class="i-constraint" data-content="<table class='table table-condensed'><tr><td>minLength</td><td>6</td></tr></table>"></i></td>
         <td class="com">Password of the user</td>
     </tr>
     <tr class="diff_version" data-version="v1.0">
@@ -301,8 +301,12 @@
         <td class="com">Accept header</td>
     </tr>
     <tr class="diff_version" data-version="v1.0">
+        <td>  <span class="str">"Access-Control-Allow-Origin"</span><span class="pun">: </span><span class="typ">string</span><span class="pun">,</span></td>
+        <td class="com">allow origin header</td>
+    </tr>
+    <tr class="diff_version" data-version="v1.0">
         <td>  <span class="str">"Content-Type"</span><span class="pun">: </span><span class="typ">string</span></td>
-        <td class="com">Link to the next element</td>
+        <td class="com">content-type header</td>
     </tr>
     <tr class="diff_version" data-version="v1.0">
         <td><span class="pun">}</span></td>
@@ -318,6 +322,7 @@
 <h6>Sample: </h6>
 <div class="code"><span class="pun">{
 </span>  <span class="str">"Accept"</span><span class="pun">: </span><span class="str">"application/json"</span><span class="pun">,
+</span>  <span class="str">"Access-Control-Allow-Origin"</span><span class="pun">: </span><span class="str">"*"</span><span class="pun">,
 </span>  <span class="str">"Content-Type"</span><span class="pun">: </span><span class="str">"application/json"</span>
 <span class="pun">}</span></div></div></div>
                 </div>
