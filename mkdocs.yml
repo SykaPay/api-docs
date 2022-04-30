@@ -1,0 +1,6 @@
+site_name: SykaPay Api Docs
+site_url: https://apidocs-sykapay.herokuapp.com/
+nav:
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
